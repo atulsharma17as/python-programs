@@ -1,48 +1,42 @@
-#to do list python program
-# make a list
-# take input
-# read write and remove the task
-class todo:
+#simple calculator
+class cal:
     def __init__(self):
-        self.a=[]
+        self.a=int(input('Enter the first number'))
+        self.b=int(input('Enter the second number '))
 
     def add(self):
-        task=input("enter the task to add")
-        self.a.append(task)
-
-    def rem(self):
-        task=input("enter the task to remove in string or numeric form ")
-        if task in self.a:
-            self.a.remove(task)
-            print('the task is removed')
-        elif 1<=int(task)<=len(self.a):
-            self.a.pop(int(task)-1)
-        else:
-            print('task in not present')
-
-
-    def show(self):
-        if self.a:
-            print('tasks are :\n')
-            for i,value in enumerate(self.a):
-                print(f"{i+1}:{value}")
-
-p=todo()
+        return self.a+self.b
+    def sub(self):
+        return self.a - self.b
+    def mul(self):
+        return self.a*self.b
+    def div(self):
+        return self.a/self.b
+    def mod(self):
+        return self.a%self.b
+    def pow(self):
+        return self.a**self.b
+o=cal()
 while True:
-    c=input('enter the character')
+    c=input('Enter the character ')
     if c=='a':
-        p.add()
-    elif c=='r':
-        p.rem()
+        print(o.add())
+        break
     elif c=='s':
-        p.show()
-    elif c=='quit':
+        print(o.sub())
+        break
+    elif c == 'd':
+        print(o.div())
+        break
+    elif c == 'mo':
+        print(o.mod())
+        break
+    elif c=='p':
+        print(o.pow())
+        break
+    elif c=='m':
+        print(o.mul())
         break
     else:
-        print('invalid keyword')
+        print('invalid charater')
         break
-
-
-
-
-
